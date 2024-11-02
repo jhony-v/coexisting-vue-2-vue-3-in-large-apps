@@ -128,11 +128,6 @@ context.$watch("$store.state", (val) => {
 * `$store.state:` Synchronizes Vuex state between Vue 2 and Vue 3.
 
 
-
-```ts
-```
-
-
 ## Using createApp in our sub-applications
 
 In our architecture, sub-applications are empowered by their own instance of the createApp function. This approach allows us to maintain a consistent structure across different modules while leveraging the flexibility of Vue 3. By using createApp, we can seamlessly integrate various components into our existing infrastructure.
@@ -178,7 +173,6 @@ Here's the Vue 2 component that serves as the container for both Vue 2 and Vue 3
 import EditPaymentSettingsModal from "../../components/edit-payment-settings-modal.js";
 import store from '../../store/store.js';
 import { renderApp } from '../../dist/payment-settings.js';
-
 
 export default {
   store,
@@ -270,7 +264,6 @@ To complement our Vite configuration, we need to add some scripts in our package
     "vite-tsconfig-paths": "^5.0.1",
   }
 }
-
 ```
 
 This setup ensures that we can effectively build and manage our application, allowing for a smooth integration of Vue 2 and Vue 3 components. As we transition from legacy to modern frameworks, having a solid bundler configuration is essential for maintaining the integrity and performance of our application.
